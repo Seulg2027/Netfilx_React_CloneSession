@@ -17,10 +17,10 @@ function Row({title, id, fetchUrl, isLargeRow
         const request = await axios.get(fetchUrl);
         setMovies(request.data.results);
     };
-
+        
     const handleClick = (movie)=>{
         setModalOpen(true);
-        setMovieSelected(movie);
+        setMovieSelected(movie); 
     }
     const BASE_URL = "https://image.tmdb.org/t/p/original/"
     return (
