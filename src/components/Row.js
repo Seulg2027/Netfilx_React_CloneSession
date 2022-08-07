@@ -1,7 +1,12 @@
 import axios from '../api/axios';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Row.css';
 import MovieModal from './MovieModal/index';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper";
+
 
 function Row({ title, id, fetchUrl, isLargeRow }) {
   const [movies, setMovies] = useState([]);
@@ -25,15 +30,21 @@ function Row({ title, id, fetchUrl, isLargeRow }) {
   const BASE_URL = 'https://image.tmdb.org/t/p/original/';
   return (
     <section className="row">
-      <h2>{title}</h2>
-      {/* 슬라이더 */}
-      <div className="slider">
-        <div className="slider__arrow-left">
-          <span className="arrow">{'<'}</span>
-        </div>
-        {/* 영화 여러 개를 key 값을 이용해 반복문 돌리기 */}
+    <h2>{title}</h2>
+    <Swiper
+          className="slider"
+          spaceBetween={10}
+          slidesPerView={6}
+          slidesPerGroup={6}
+          onSlideChange={() => console.log('slide change')}
+          onSwiper={(swiper) => console.log(swiper)}
+          navigation={true} 
+          modules={[Navigation]}
+          >
+
         <div id={id} className="row__posters">
-          {movies.map((movie) => (
+        { movies.map( (movie) => (
+            <SwiperSlide>
             <img
               key={movie.id}
               className={`row__poster ${isLargeRow && 'row__posterLarge'}`}
@@ -42,13 +53,13 @@ function Row({ title, id, fetchUrl, isLargeRow }) {
               alt={movie.name}
               onClick={() => handleClick(movie)}
             />
+            </SwiperSlide>
           ))}
         </div>
-        <div className="slider__arrow-right">
-          <span className="arrow">{'>'}</span>
-        </div>
-      </div>
+      </Swiper>
+
       {modalOpen && <MovieModal {...movieSelected} setModalOpen={setModalOpen} />}
+
     </section>
   );
 }
