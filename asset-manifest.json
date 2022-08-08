@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/React_Netfilx/static/css/main.51883a6c.css",
-    "main.js": "/React_Netfilx/static/js/main.ecf99303.js",
-    "static/js/787.d7c06f0a.chunk.js": "/React_Netfilx/static/js/787.d7c06f0a.chunk.js",
-    "index.html": "/React_Netfilx/index.html",
-    "main.51883a6c.css.map": "/React_Netfilx/static/css/main.51883a6c.css.map",
-    "main.ecf99303.js.map": "/React_Netfilx/static/js/main.ecf99303.js.map",
-    "787.d7c06f0a.chunk.js.map": "/React_Netfilx/static/js/787.d7c06f0a.chunk.js.map"
+    "main.css": "/React/Netfilx/static/css/main.51883a6c.css",
+    "main.js": "/React/Netfilx/static/js/main.22537923.js",
+    "static/js/787.d7c06f0a.chunk.js": "/React/Netfilx/static/js/787.d7c06f0a.chunk.js",
+    "index.html": "/React/Netfilx/index.html",
+    "main.51883a6c.css.map": "/React/Netfilx/static/css/main.51883a6c.css.map",
+    "main.22537923.js.map": "/React/Netfilx/static/js/main.22537923.js.map",
+    "787.d7c06f0a.chunk.js.map": "/React/Netfilx/static/js/787.d7c06f0a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.51883a6c.css",
-    "static/js/main.ecf99303.js"
+    "static/js/main.22537923.js"
   ]
 }
