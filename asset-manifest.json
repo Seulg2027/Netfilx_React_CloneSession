@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/React/static/css/main.51883a6c.css",
-    "main.js": "/React/static/js/main.67fe9b81.js",
-    "static/js/787.d7c06f0a.chunk.js": "/React/static/js/787.d7c06f0a.chunk.js",
-    "index.html": "/React/index.html",
-    "main.51883a6c.css.map": "/React/static/css/main.51883a6c.css.map",
-    "main.67fe9b81.js.map": "/React/static/js/main.67fe9b81.js.map",
-    "787.d7c06f0a.chunk.js.map": "/React/static/js/787.d7c06f0a.chunk.js.map"
+    "main.css": "/Netfilx_React_CloneSession/static/css/main.51883a6c.css",
+    "main.js": "/Netfilx_React_CloneSession/static/js/main.0bc73a73.js",
+    "static/js/787.d7c06f0a.chunk.js": "/Netfilx_React_CloneSession/static/js/787.d7c06f0a.chunk.js",
+    "index.html": "/Netfilx_React_CloneSession/index.html",
+    "main.51883a6c.css.map": "/Netfilx_React_CloneSession/static/css/main.51883a6c.css.map",
+    "main.0bc73a73.js.map": "/Netfilx_React_CloneSession/static/js/main.0bc73a73.js.map",
+    "787.d7c06f0a.chunk.js.map": "/Netfilx_React_CloneSession/static/js/787.d7c06f0a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.51883a6c.css",
-    "static/js/main.67fe9b81.js"
+    "static/js/main.0bc73a73.js"
   ]
 }
