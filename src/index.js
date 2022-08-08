@@ -7,7 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter basename="React">
+  <BrowserRouter basename="Netfilx_React_CloneSession">
     <App />
   </BrowserRouter>
 );
