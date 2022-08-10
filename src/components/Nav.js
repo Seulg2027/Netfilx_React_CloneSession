@@ -1,5 +1,6 @@
 import "./Nav.css";
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from "react-router-dom";
 
 export default function Nav() {
     const [show, setShow] = useState(false);
@@ -17,6 +18,14 @@ export default function Nav() {
         }
     }, []);
 
+    const [searchValue, setsearchValue] = useState("");
+    const navigate = useNavigate();
+
+    const handleChange = (e) => {
+        setsearchValue(e.target.value);
+        navigate(`/search?q=${e.target.value}`);
+    };
+
     return (
         <nav className={`nav ${show && "nav_black"}`}>
             <img
@@ -24,6 +33,14 @@ export default function Nav() {
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2880px-Netflix_2015_logo.svg.png"
                 className='nav__logo'
                 onClick={()=>window.location.reload()}
+            />
+
+            <input
+                value={searchValue}
+                onChange={handleChange}
+                className="nav__input"
+                type="text"
+                placeholder="영화제목을 입력해주세요."
             />
 
             <img
