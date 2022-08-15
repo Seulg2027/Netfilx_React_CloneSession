@@ -5,7 +5,7 @@ import './SearchPage.css';
 import { useDebounce } from '../../hooks/useDebounce';
 
 export default function SearchPage() {
-  console.log('useLocation', useLocation());
+  console.log('useLocation() :', useLocation());
   const navigate = useNavigate();
   const [searchResult, setSearchResult] = useState([]);
 
@@ -26,10 +26,10 @@ export default function SearchPage() {
 
   const fetchSearchMovie = async (searchTerm) => {
     try {
-      const request = await axios.get(`/search/multi?include_adult=false?query=${searchTerm}`);
-      setSearchResult(request.data.result);
-    } catch (e) {
-      console.log(e);
+      const request = await axios.get(`/search/multi?include_adult=false&query=${searchTerm}`);
+      setSearchResult(request.data.results);
+    } catch (error) {
+      console.log(error);
     }
   };
 
@@ -52,7 +52,7 @@ export default function SearchPage() {
     ) : (
       <section className="no-results">
         <div className="no-results__text">
-          <p>찾고자하는 검색어 "{debouncedSearchTerm}"에 맞는 영화가 없습니다.</p>
+          <p>찾고자하는 검색어"{debouncedSearchTerm}"에 맞는 영화가 없습니다.</p>
         </div>
       </section>
     );
